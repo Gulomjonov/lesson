@@ -16,3 +16,7 @@ public class Main2 {
         }
     }
 }
+
+// Deserialization -> byte stream yoki fayl ichidagi data'ni Java obyektga aylantirish jarayoni hisoblanadi
+
+// File/Network -> Byte Stream -> Java object
