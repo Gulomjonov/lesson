@@ -41,7 +41,7 @@ public class Dog {
 
 // Masalan bizda Dog classi mavjud
 // Biz walk() metodi bilan sayr qilishimiz kerak bo'ladi
-// Lekin sayr qilishdan oldin biz, dog-ga yoqa (osheynik), ip (povodok) va tumshuq qopqog‘i (namordnik)
+// Lekin sayr qilishdan oldin biz, dog-ga yoqa, ip va tumshuq qopqogi
 // taqilgan yoki yo‘qligini tekshirishimiz kerak bo'ladi
 // Agar ulardan birontasi taqilmagan bo'lsa, bizga DogIsNotReadyException nomli o'zimiz yaratgan
 // Custom Exceptiondi chiqarishimiz kerak bo'ladi.
