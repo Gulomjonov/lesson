@@ -1,4 +1,4 @@
-package com.oop.collection.map;
+package com.oop.lesson_1.map;
 
 import java.util.Arrays;
 

@@ -10,5 +10,6 @@ public class OopApplication {
 
         SpringApplication.run(OopApplication.class, args);
     }
-
 }
+
+// Generic, Immutability, Exception, Java Features

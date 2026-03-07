@@ -1,4 +1,4 @@
-package com.oop.equals;
+package com.oop.lesson_2;
 
 import java.util.Objects;
 

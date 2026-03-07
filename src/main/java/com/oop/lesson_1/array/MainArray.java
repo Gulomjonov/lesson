@@ -1,4 +1,4 @@
-package com.oop.collection.array;
+package com.oop.lesson_1.array;
 
 import java.util.ArrayList;
 

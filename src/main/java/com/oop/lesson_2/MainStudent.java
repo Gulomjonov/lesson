@@ -1,4 +1,4 @@
-package com.oop.equals;
+package com.oop.lesson_2;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,13 +26,13 @@ public class MainStudent {
         set.add(s2);
         set.add(null);
 
-        System.out.println("Get size set collection: " + set.size()); // size = 1 bo'ladi, sababi set unique ma'lumotlarni o'z ichida saqlaydi
+        System.out.println("Get size set lesson_1: " + set.size()); // size = 1 bo'ladi, sababi set unique ma'lumotlarni o'z ichida saqlaydi
 
     }
 }
 
 // Muhim koida
-// agar a.equals(b) == true bo'lsa
+// agar a.lesson_2(b) == true bo'lsa
 // a.hashCode() == b.hashCode() bo'lishi SHART, ya'ni ularni har doim override qilishimiz kerak
 // Bo'lmasa HashMap/HashSet noto'g'ri ishlaydi
 

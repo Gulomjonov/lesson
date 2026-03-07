@@ -1,4 +1,4 @@
-package com.oop.collection.map;
+package com.oop.lesson_1.map;
 
 import java.util.HashMap;
 
@@ -66,4 +66,4 @@ public class HashMapDemo {
 // 16 bucket. Load Factor: 0.75 (16 bucketli joyda 75% to'lsa resize bo'ladi)
 
 // Put/Get/Remove O(1) o'rtacha
-// Muhim sifati -> key ishlatiladigan objectda equals + hashCode to'g'ri bo'lishi shart!
+// Muhim sifati -> key ishlatiladigan objectda lesson_2 + hashCode to'g'ri bo'lishi shart!

@@ -1,4 +1,4 @@
-package com.oop.collection.linked;
+package com.oop.lesson_1.linked;
 
 import java.util.LinkedList;
 
