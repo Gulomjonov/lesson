@@ -1,5 +1,11 @@
 package com.oop.lesson_4;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Data
 public class Dog {
 
     private String name;

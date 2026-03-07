@@ -1,0 +1,173 @@
+ Istisno (Exception)
+
+ Exception nima?
+ Exception - dastur ishlayotgan vaqtida (runtime paytda) yuzaga keladigan xatolik
+
+ Java'da barcha xatoliklar Throwable klassidan voris(extends) oladi, yani kelib chiqishi
+
+
+Throwable
+   |
+   |------ Error
+   |
+   |------ Exception
+
+ Error JVM darajasidagi xatolik hisoblanadi
+ Error o'z vaqtida 2-ga bo'linadi
+ 1. OutOfMemoryError
+ 2. StackOverflowError
+
+ public void recursion() { bu StackOverflowError error metod yani metod o'zini o'zi chaqiryabdi
+      recursion()
+ }
+
+ Exception ham 2-ga bo'linadi:
+ 1. Checked
+ 2. Unchecked
+
+ Checked exception -> Exception dan meros oladi
+ Bunday exceptionlar compile vaqtida tekshiriladi
+ Agar agar exception ushlanmasa, kompilyatsiya xatolik beradi
+
+ Unhandled exception -> bunda holatda metodni ichida try-catch yoki throws foydalanishimiz kerak
+      IOException
+      SQLException
+      FileNotFoundException
+
+ Unchecked Exception -> RuntimeException dan meros oladi
+ Bunday exceptionlar runtime paytida chiqadi, compiler majbur qilmaydi
+
+ Misol uchun
+    NullPointerException
+    ArithmeticException
+    ArrayIndexOutOfBoundsException
+
+ Biz exceptionlarda throw va throws kalit so'zlar mavjud
+
+ throw exceptionni dasturchi tomonidan qo'lda yozib chiqarish uchun ishlatiladi
+
+  if (age < 18) {
+      throw new RuntimeException("Yosh yetarli emas");
+ }
+
+ throws - metod qaysidir exception chiqarilishi mumkunligini ko'rsatadi
+
+  public void readFile() throws IOException {
+    FileReader file = new FileReader("test.txt");
+  }
+
+ try-catch-finally
+
+ try - xato chiqishi mumkun bo'lgan kod yoziladi
+ catch - xatoni ushlab oladi
+ finally - har qanday holatda ishlaydi
+
+    try {
+    int a = 10 / 0;
+    } catch (ArithmeticException e) {
+            System.out.println("Matematik xato");
+    } finally {
+            System.out.println("Bu har doim ishlaydi");
+    }
+
+ finally qachon ishlaydi?
+
+ finally blok har qanday holatda ham ishlaydi
+
+    Ya’ni:
+      exception bo‘lsa ham
+      exception bo‘lmasa ham
+      catch ishlasa ham
+      ishlamasa ham
+
+ finally qachon ishlamasligi mumkun?
+ Juda kam holatlarda
+
+      System.exit() chaqirilsa
+
+    try {
+            System.exit(0);
+    } finally {
+            System.out.println("Bu chiqmaydi");
+    }
+
+ try-catch
+ Bu exception ushlash uchun ishlatiladi
+
+ try-finally
+ Bu resurslarni yopish yoki oxirgi kodni ishlatish uchun ishlatiladi
+ ya'ni exception bo'lsa ham ishlaydi
+
+ Bizda finally keywordan foydalanmaydigan holat mavjud
+ try-with-resources - bu resurs (fayl, stream, connection) bilan ishlaganda avtomatik yopib beradigan try blok
+ Oddiy try-catch da resursni qo'lda yopish kerak
+
+ Oddiy usul
+
+    FileReader file = null;
+
+    try {
+    file = new FileReader("test.txt");
+    } catch (IOException e) {
+            e.printStackTrace();
+    } finally {
+            try {
+            file.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+   }
+
+ try-with-resources
+
+ try (FileReader file = new FileReader("test.txt")) {
+         fayl bilan ishlash
+        } catch (IOException e) {
+        e.printStackTrace();
+ }
+
+ Exceptionlarda yana Multiple catch mavjud - u nima deyilsa
+
+ Multiple catch bir nechta turdagi exceptionlarni alohida catch bloklarda ushlash
+
+ Misol uchun:
+
+ try {
+ int[] arr = new int[5];
+     System.out.println(arr[10]);
+ } catch (ArithmeticException e) {
+         System.out.println("Matematik xato");
+ } catch (ArrayIndexOutOfBoundsException e) {
+         System.out.println("Index noto‘g‘ri");
+ }
+
+ Java 7-dan boshlab bitta catchda ham yozish mumkin
+
+ try {
+    int a = 10 / 0;
+ } catch (ArithmeticException | NullPointerException e) {
+         System.out.println("Xatolik yuz berdi");
+ }
+
+ Qachon ishlaydi?
+ Resource klassi AutoCloseable yoki Closeable ni implement qilgan bo'lishi kerak
+
+ Ba'zi hollarda standart exceptionlar yetarli bo'lmaydi shuni uchun dasturchi tomonidan exception klass yoziladi
+
+ Custom Exception
+
+ Custom exception - dasturchi tomonidan yaratiladigan exception klass
+ bu biznes logikani aniq ko'rsatish, aniq xatoliklarni tartibli boshqarish va kodni tushunarli qilish uchun ishlatiladi
+
+ Global Exception
+
+ Global exception butun application bo'yicha barcha exceptionlarni bitta joyda ushlab (habdle qilib) boshqarish mexanizmi
+ bu dasturlarda mavjud va muhim mexanizm hisoblanadi
+ Masalan API da xatolik chiqsa har joyda try-catch yozish o‘rniga bitta global handler ishlatiladi.
+ Global exception barcha xatolarni bitta joyda boshqarish, kodni tozalash (try-catch kamayadi), API da bir xil formatdagi error response qaytarish, Logging qilish
+
+Custom Exception → xatolik yaratish uchun
+Global Exception → xatolikni ushlab olish uchun
+
+Custom Exception  → throw qilinadi
+Global Exception  → catch qilib handle qiladi
