@@ -128,19 +128,19 @@ public class Main {
 //            e.printStackTrace();
 //        }
 //   }
-//
+
 // try-with-resources
-//
+
 // try (FileReader file = new FileReader("test.txt")) {
 //         fayl bilan ishlash
 //        } catch (IOException e) {
 //        e.printStackTrace();
 // }
-//
+
 // Exceptionlarda yana Multiple catch mavjud - u nima deyilsa
-//
+
 // Multiple catch bir nechta turdagi exceptionlarni alohida catch bloklarda ushlash
-//
+
 // Misol uchun:
 //
 // try {
@@ -151,7 +151,7 @@ public class Main {
 // } catch (ArrayIndexOutOfBoundsException e) {
 //         System.out.println("Index noto‘g‘ri");
 // }
-//
+
 // Java 7-dan boshlab bitta catchda ham yozish mumkin
 //
 // try {
@@ -159,7 +159,7 @@ public class Main {
 // } catch (ArithmeticException | NullPointerException e) {
 //         System.out.println("Xatolik yuz berdi");
 // }
-//
+
 // Qachon ishlaydi?
 // Resource klassi AutoCloseable yoki Closeable ni implement qilgan bo'lishi kerak
 //

@@ -1,12 +1,17 @@
 package com.oop.lesson_1.list;
 
+import com.oop.lesson_1.map.BadKey;
+
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 public class Test {
     public static void main(String[] args) {
 
         int N = 100_000;
+
+        HashSet<BadKey> set = new HashSet<BadKey>();
 
         ArrayList<Integer> al = new ArrayList<>();
         LinkedList<Integer> ll = new LinkedList<>();
