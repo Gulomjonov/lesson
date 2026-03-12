@@ -44,10 +44,10 @@ public class Main {
         System.out.println("'oop' tegi bormi? " + post.haveTag("oop"));
 
         // TreeMap
-        Book lughat = new Book();
-        lughat.sozQoshish("apple", "olma");
-        lughat.sozQoshish("car", "mashina");
-        lughat.sozQoshish("book", "kitob");
-        lughat.hammaSozlar();
+        Book book = new Book();
+        book.sozQoshish("apple", "olma");
+        book.sozQoshish("car", "mashina");
+        book.sozQoshish("book", "kitob");
+        book.hammaSozlar();
     }
 }
