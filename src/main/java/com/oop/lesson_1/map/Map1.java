@@ -2,7 +2,7 @@ package com.oop.lesson_1.map;
 
 import java.util.HashMap;
 
-public class Map {
+public class Map1 {
     public static void main(String[] args) {
         HashMap<BadKey, String> map = new HashMap<>();
 
