@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Ombor {
+
     private Map<String, Product> mahsulotlar = new HashMap<>();
 
     public void qoshish(Product m) {
