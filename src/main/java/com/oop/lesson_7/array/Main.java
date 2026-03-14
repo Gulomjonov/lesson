@@ -46,9 +46,9 @@ public class Main {
         str.add(5, "Yuriy");  // 5 index value Yuriyga o'zgaradi
         System.out.println(str);
 
-        str.add(-1, "Ali");
+        str.add(-1, "Ali");   // java.lang.IndexOutOfBoundsException: Index: -1, Size: 14
         System.out.println(str);
-        str.add(101, "Vali");
+        str.add(101, "Vali");  // java.lang.IndexOutOfBoundsException: Index: 101, Size: 14
         System.out.println(str);
     }
 }
