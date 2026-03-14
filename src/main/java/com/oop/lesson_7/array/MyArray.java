@@ -12,23 +12,25 @@ public class MyArray<T> {
     }
 
     public void add(T element) {
-        ensureCapacity();
+        ensureCapacity(); // capacitini tekshiramiz
         data[size++] = element;
     }
 
     public void add(int index, T element) {
-        checkIndexForAdd(index);
+        checkIndexForAdd(index); // agar index 0-dan kichik yoki sizedan katta bo'lsa hatolik qaytaramiz
         ensureCapacity();
+        // index dan keying elementlarni bir joy ongga suriladi
         for (int i = size; i > index; i--) {
             data[i] = data[i - 1];
         }
-        data[index] = element;
-        size++;
+        data[index] = element; // boshatilgan joyga yangi elementni qoyamiz
+        size++;                // element soni bittaga oshadi
     }
 
     public T remove(int index) {
         checkIndex(index);
         T removed = (T) data[index];
+        // Bu yerda esa keyingi element bir joyga chapga suriladi
         for (int i = index; i < size - 1; i++) {
             data[i] = data[i + 1];
         }

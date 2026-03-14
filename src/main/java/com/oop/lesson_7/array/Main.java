@@ -45,10 +45,15 @@ public class Main {
 
         str.add(5, "Yuriy");  // 5 index value Yuriyga o'zgaradi
         System.out.println(str);
+
+        str.add(-1, "Ali");
+        System.out.println(str);
+        str.add(101, "Vali");
+        System.out.println(str);
     }
 }
 
-// Consoleda shular chiqadi
+//        Console:
 
 //        [10, 20, 30, 40, 50]
 //        [10, 100, 30, 40, 50]
@@ -59,3 +64,9 @@ public class Main {
 //        [Nodir, Karim, Nurillo, Jobir, Asror, Aziz, Bilol, Oraz, Husan, Hasan, Begi, Nizomiy, Hoji]
 //        [Nodir, Karim, Tolib, Jobir, Asror, Aziz, Bilol, Oraz, Husan, Hasan, Begi, Nizomiy, Hoji]
 //        [Nodir, Karim, Tolib, Jobir, Asror, Yuriy, Aziz, Bilol, Oraz, Husan, Hasan, Begi, Nizomiy, Hoji]
+
+
+//        Exception in thread "main" java.lang.IndexOutOfBoundsException: Index: -1, Size: 14
+//        at com.oop.lesson_7.array.MyArray.checkIndexForAdd(MyArray.java:76)
+//        at com.oop.lesson_7.array.MyArray.add(MyArray.java:20)
+//        at com.oop.lesson_7.array.Main.main(Main.java:49)
