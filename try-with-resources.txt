@@ -100,7 +100,7 @@ Throwable
 
  Bizda finally keywordan foydalanmaydigan holat mavjud
  try-with-resources - bu resurs (fayl, stream, connection) bilan ishlaganda avtomatik yopib beradigan try blok
- Oddiy try-catch da resursni qo'lda yopish kerak
+ Oddiy try-catch da resursni qo'lda yopish kerak!!!
 
  Oddiy usul
 
@@ -171,3 +171,4 @@ Global Exception → xatolikni ushlab olish uchun
 
 Custom Exception  → throw qilinadi
 Global Exception  → catch qilib handle qiladi
+
