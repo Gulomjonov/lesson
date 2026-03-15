@@ -45,7 +45,6 @@ public class MySingleLinked<T> {
             throw new RuntimeException("List is empty");
 
         if (size == 1) { // faqat bitta element bo'lsa
-            T removed = head.data;
             head = head.next;
             size--;
             return;
@@ -55,7 +54,6 @@ public class MySingleLinked<T> {
         while (current.next.next != null) {
             current = current.next;
         }
-        T removed = current.next.data;
         current.next = null;
         size--;
     }
